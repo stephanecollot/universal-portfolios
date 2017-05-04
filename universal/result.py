@@ -346,7 +346,7 @@ class ListResult(list, PickleMixin):
         # plot portfolio
         d = self.to_dataframe()
         portfolio = d.copy()
-        ax = portfolio.plot(linewidth=3., legend=False, **kwargs)
+        ax = portfolio.plot(**kwargs) # linewidth=3., legend=False,
         kwargs['ax'] = ax
 
         ax.set_ylabel('Total wealth')
@@ -377,7 +377,7 @@ class ListResult(list, PickleMixin):
             self[0].asset_equity[assets].plot(colormap=plt.get_cmap('jet'), **kwargs)
 
         # plot portfolio again to highlight it
-        kwargs['color'] = 'blue'
-        portfolio.plot(linewidth=3., **kwargs)
+        #kwargs['color'] = 'red'
+        #portfolio.plot(linewidth=3., **kwargs)
 
         return ax
