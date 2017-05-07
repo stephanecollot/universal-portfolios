@@ -190,6 +190,8 @@ class AlgoResult(PickleMixin):
         x = self.r_log
         win = (x > 0).sum()
         all_trades = (x != 0).sum()
+        if all_trades == 0:
+            return np.inf
         return float(win) / all_trades
 
     def freq(self, x=None):
