@@ -109,7 +109,7 @@ class Algo(object):
 
             # show progress by 10 pcts
             if log_progress:
-                tools.log_progress(t, len(X), by=10)
+                tools.log_progress(t, len(X), by=10, algo=self.__class__.__name__)
 
         return B
 
