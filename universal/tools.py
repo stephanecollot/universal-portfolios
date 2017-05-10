@@ -336,13 +336,13 @@ def combinations(S, r):
         yield S[list(ncols)]
 
 
-def log_progress(i, total, by=1):
+def log_progress(i, total, by=1, algo=''):
     """ Log progress by pcts. """
     progress = ((100 * i / total) // by) * by
     last_progress = ((100 * (i-1) / total) // by) * by
 
     if progress != last_progress:
-        logging.debug('Progress: {}%...'.format(progress))
+        logging.debug('{} Progress: {}%...'.format(algo, progress))
 
 
 def sharpe(r_log, rf_rate=0., alpha=0., freq=None, sd_factor=1.):
