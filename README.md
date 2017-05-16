@@ -28,6 +28,9 @@ The usual scientific libraries: numpy, scipy, pandas, matplotlib and cvxopt. All
 
 ```
 pip install universal-portfolios
+
+or
+pip install git+https://github.com/stephanecollot/universal-portfolios@master
 ```
 
 `universal-portfolios` works under both python 2 and 3.
