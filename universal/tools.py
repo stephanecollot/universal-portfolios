@@ -13,7 +13,8 @@ import os
 import logging
 import itertools
 import multiprocessing
-from pandas.stats.api import ols
+#from pandas.stats.api import ols
+from statsmodels.api import OLS as ols
 import contextlib
 from cvxopt import solvers, matrix
 solvers.options['show_progress'] = False
